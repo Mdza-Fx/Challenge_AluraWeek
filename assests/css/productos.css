@@ -1,0 +1,128 @@
+.seccion__productos {
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+  }
+
+  .lista {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding-bottom: 32px;
+  }
+  
+  .seccion__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+  }
+  
+  .lista__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .lista__head__titulo {
+    color: var(--preto-100, #464646);
+    font-size: 32px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .lista__head__boton {
+    color: var(--azul-100, #2A7AE4);
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;  
+  }
+
+  
+  .productos__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  
+  .productos__tarjeta {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+  }
+  
+  .productos__tarjeta__contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px ;
+  }
+
+  .productos__tarjeta__titulo {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    margin-top: 8px;
+    padding-left: 8px;
+
+    color: var(--preto-100, #464646);
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .productos__tarjeta__precio {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    padding-left: 8px;
+
+    color: var(--preto-100, #464646);
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+.productos__tarjeta__boton {
+    color: var(--azul-100, #2A7AE4);
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+  }
+
+  
+  .productos__tarjeta__imagen {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+  }
+  
+  .productos__tarjeta__boton {
+    padding: 8px 16px;
+    background-color: var(--azul-100, #2A7AE4);
+    color: white;
+    border: none;
+    border-radius: 0 0 5px 5px;
+    text-decoration: none;
+  }
+  
+  .productos__tarjeta__boton:hover {
+    box-shadow: 10px 5px 10px 5px rgba(22, 26, 45, 0.11);
+    transform: scale(1.02);
+  }
+  

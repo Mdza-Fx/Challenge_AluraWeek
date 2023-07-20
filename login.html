@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Alura Week</title>
+    <link rel="stylesheet" href="assests/css/reset.css">
+    <link rel="stylesheet" href="assests/css/variables.css">
+    <link rel="stylesheet" href="assests/css/header.css">
+    <link rel="stylesheet" href="assests/css/login.css">
+    <link rel="stylesheet" href="assests/css/footer.css">
+    <script src="assests/js/login.js"></script>
+
+</head>
+<body>
+
+    <header class="header__container">
+        <div class="header__items">
+            <a href="index.html" class="header__logoHome">
+                <img class="header__logoHome-image" src="assests/img/Logo.svg" alt="logo">
+            </a>
+            <div class="header__search" id="search__container">
+                <input type="text" class="header__search-input" id="search__items" placeholder="Qué desea buscar ?">
+                <button class="header__search-button" id="search__action">
+                    <img src="assests/img/Icone.svg" alt="" class="header__search-icon">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!--Login-->
+
+    <div class="login">
+        <div class="login__container">
+            <h3 class="login__titulo">Iniciar Sesión</h3>
+
+            <div class="login__input-container">
+                <input name="usuario" id="usuario" class="input inputs" type="text" placeholder="usuario" required>
+            </div>
+
+            <div class="login__input-container">
+                <input name="contraseña" id="contraseña" class="input inputs" type="password" placeholder="contraseña" required>
+            </div>
+
+            <input class="login_boton" type="submit" name="enviar" id="enviar-login" value="Entrar">
+        </div>
+    </div>
+
+    <!--Footer-->
+
+    <footer>
+        <section class="footer">
+            <div class="footer__contenedor">
+                <div class="footer__contenedor__info">
+                    <a href="#">
+                        <img class="header__logoHome" src="assests/img/Logo.svg" alt="logo alura">
+                    </a>
+
+                    <ul class="footer__links">
+                        <li class="footer__enlace">
+                            <a href="#">Quienes Somos</a>
+                        </li>
+                        <li class="footer__enlace">
+                            <a href="#">Politica de privacidad</a>
+                        </li>
+                        <li class="footer__enlace">
+                            <a href="#">Programa de fidelidad</a>
+                        </li>
+                        <li class="footer__enlace">
+                            <a href="#">Nuestras Tiendas</a>
+                        </li>
+                        <li class="footer__enlace">
+                            <a href="#">Quiero ser franquiciado</a>
+                        </li>
+                        <li class="footer__enlace">
+                            <a href="#">Anúncie aqui</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="contacto__contactar" id="form__data">
+            <h2 class="contacto__contactar-title">Hable con nosotros</h2>
+
+            <label class="contacto__contactar-nombre contacto__textBox">
+                <input class="contacto__contactar-nombreInput" id="contact__nombre" name="nombre" placeholder="" required="" type="text">
+            </label>
+
+            <label class="contacto__mensaje contacto__textBox">
+                <textarea class="contacto__mensaje-text" id="contact__mensaje" required=""></textarea>
+            </label>
+
+            <button class="contacto__button" id="contact__boton" type="submit" value="Enviar mensaje">Enviar mensaje</button>
+        </form>
+            </div>
+        </section>
+
+        <section class="rodapie">
+            <div class="rodapie__creditos">
+                <p>Desarrollado por Medoza Felix</p>
+                <p>2023 - Grupo 5 (G5)</p>
+            </div>
+        </section>
+    </footer>
+
+    <script>
+        // Obtener referencia al botón de enviar
+        const enviarBtn = document.getElementById('enviar-login');
+      
+        // Agregar un evento de click al botón de enviar
+        enviarBtn.addEventListener('click', function() {
+          // Obtener los valores del usuario y la contraseña
+          const usuario = document.getElementById('usuario').value;
+          const contraseña = document.getElementById('contraseña').value;
+      
+          // Verificar si el usuario y la contraseña son válidos
+          if (usuario === 'admin' && contraseña === 'admin') {
+            // Mostrar el popup en el centro de la pantalla
+            const popup = document.createElement('div');
+            popup.className = 'popup';
+            popup.textContent = 'Inicio de sesión exitoso';
+            document.body.appendChild(popup);
+      
+            // Redirigir al usuario a la página usuario.html después de 3 segundos
+            setTimeout(function() {
+              window.location.href = 'usuario.html';
+            }, 1000);
+          } else {
+            alert('Usuario o contraseña incorrectos');
+          }
+        });
+      </script>
+      
+      
+</body>
+</html>
